@@ -33,7 +33,7 @@ const Recipe = ({ data }) => {
 
     <Card>
       <CardMedia
-        style={{ height: 250, width: 250 }}
+        style={{ height: 0, padding: 80 }}
         image={data.image}
         title={data.label}
       />

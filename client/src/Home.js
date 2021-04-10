@@ -33,10 +33,10 @@ class Home extends React.Component {
       >
         <SearchBar search={(param) => this.search(param)} />
 
-        <Grid container spacing={3}>
+        <Grid container spacing={2}>
           {this.state.recipes.map((recipe, i) => (
-            <Grid item xs={4}>
-              <Recipe key={i} data={recipe} />;
+            <Grid item xs={3}>
+              <Recipe key={i} data={recipe} />
             </Grid>
           ))}
         </Grid>
