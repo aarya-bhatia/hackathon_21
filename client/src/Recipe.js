@@ -1,19 +1,5 @@
 import React from "react";
 
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Collapse,
-  Container,
-  IconButton,
-  Typography,
-} from "@material-ui/core";
-
-import { Favorite, Share } from "@material-ui/icons";
-
 const Recipe = ({ data }) => {
   return (
     // <div>
@@ -31,31 +17,28 @@ const Recipe = ({ data }) => {
     //   <hr />
     // </div>
 
-    <Card>
-      <CardMedia
-        style={{ height: 0, padding: 80 }}
-        image={data.image}
-        title={data.label}
-      />
-      <CardContent>
-        <Typography component="h4">{data.label}</Typography>
-
-        <Typography variant="body2" color="textSecondary" component="p">
-          Time: {data.totalTime}
-        </Typography>
-
-        <Typography>Calories: {Math.round(data.calories)}</Typography>
-      </CardContent>
-
-      <CardActions>
-        <IconButton>
-          <Favorite />
-        </IconButton>
-        <IconButton>
-          <Share />
-        </IconButton>
-      </CardActions>
-    </Card>
+    <div className="card">
+      <div className="card-image">
+        <img src={data.image} alt={data.label} />
+        <span className="card-title">{data.label}</span>
+        <a
+          href="!"
+          className="btn-floating halfway-fab waves-effect waves-light green"
+        >
+          <i className="material-icons">add</i>
+        </a>
+      </div>
+      <div className="card-content">
+        <div> Time: {data.totalTime} minutes </div>
+        <div> Calories: {Math.round(data.calories)} </div>
+        {/* <div>Cooking Instructions</div>
+        <ul>
+          {data.instructions.map((line) => {
+            return <li>{line}</li>;
+          })}
+        </ul> */}
+      </div>
+    </div>
   );
 };
 

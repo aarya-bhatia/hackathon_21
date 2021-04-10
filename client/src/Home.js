@@ -1,8 +1,8 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import Recipe from "./Recipe";
+import Navbar from "./Navbar";
 import { loadData, getRecipes } from "./api";
-import { Box, Grid, GridList, GridListTile } from "@material-ui/core";
 
 console.log("hello");
 
@@ -26,21 +26,27 @@ class Home extends React.Component {
 
   render() {
     return (
-      <Box
-        style={{
-          flexGrow: 1,
-        }}
-      >
-        <SearchBar search={(param) => this.search(param)} />
-
-        <Grid container spacing={2}>
-          {this.state.recipes.map((recipe, i) => (
-            <Grid item xs={3}>
-              <Recipe key={i} data={recipe} />
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
+      <div>
+        <Navbar />
+        <div
+          className="container"
+          style={{
+            marginTop: "10px",
+            marginBottom: "10px",
+          }}
+        >
+          <SearchBar search={(param) => this.search(param)} />
+        </div>
+        <div className="container">
+          <div className="row">
+            {this.state.recipes.map((recipe, i) => (
+              <div className="col s4">
+                <Recipe key={i} data={recipe} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     );
   }
 }

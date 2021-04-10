@@ -1,13 +1,7 @@
 import React, { useState } from "react";
-import { Box, Button, IconButton, TextField } from "@material-ui/core";
-import { Search } from "@material-ui/icons";
 
 const SearchBar = (props) => {
   const [text, setText] = useState("");
-
-  const handleChange = (e) => {
-    setText(e.target.value);
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,18 +9,21 @@ const SearchBar = (props) => {
   };
 
   return (
-    <Box
-      style={{
-        padding: 10,
-      }}
-    >
-      <form onSubmit={handleSubmit}>
-        <TextField id="standard-basic" label="Search" onChange={handleChange} />
-        <IconButton type="submit">
-          <Search />
-        </IconButton>
+    <div className="row">
+      <form className="col s12" onSubmit={handleSubmit}>
+        <div className="row">
+          <div className="input-field col s12">
+            <input
+              id="search"
+              type="text"
+              onChange={(e) => setText(e.target.value)}
+              autoComplete="off"
+            />
+            <label for="search">Search</label>
+          </div>
+        </div>
       </form>
-    </Box>
+    </div>
   );
 };
 
