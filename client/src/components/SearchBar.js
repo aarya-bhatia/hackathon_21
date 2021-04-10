@@ -19,7 +19,7 @@ const SearchBar = (props) => {
               onChange={(e) => setText(e.target.value)}
               autoComplete="off"
             />
-            <label for="search">Search</label>
+            <label htmlFor="search">Search</label>
           </div>
         </div>
       </form>

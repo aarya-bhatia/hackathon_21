@@ -14,6 +14,7 @@ const loadData = (searchWord) => {
 };
 
 const getRecipes = (data) => {
+  console.log(data);
   let arr = [];
   data.hits.forEach((e) => {
     arr = [...arr, extractRecipeData(e.recipe)];

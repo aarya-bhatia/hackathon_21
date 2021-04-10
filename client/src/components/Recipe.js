@@ -1,22 +1,12 @@
 import React from "react";
 
-const Recipe = ({ data }) => {
-  return (
-    // <div>
-    //   <h4>{data.label}</h4>
-    //   <img src={data.image} />
-    //   <p></p>
-    //   <p> Time: {data.totalTime} minutes </p>
-    //   <p> Calories: {Math.round(data.calories)} </p>
-    //   <h4>Cooking Instructions</h4>
-    //   <ul>
-    //     {data.instructions.map((line) => {
-    //       return <li>{line}</li>;
-    //     })}
-    //   </ul>
-    //   <hr />
-    // </div>
+const Recipe = ({ data, addRecipe }) => {
+  function handleClick() {
+    console.log("Adding: ", data);
+    addRecipe(data);
+  }
 
+  return (
     <div className="card">
       <div className="card-image">
         <img src={data.image} alt={data.label} />
@@ -25,7 +15,9 @@ const Recipe = ({ data }) => {
           href="!"
           className="btn-floating halfway-fab waves-effect waves-light green"
         >
-          <i className="material-icons">add</i>
+          <button className="btn-floating" onClick={handleClick}>
+            <i className="material-icons">add</i>
+          </button>
         </a>
       </div>
       <div className="card-content">
