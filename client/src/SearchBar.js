@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Box, Button, IconButton, TextField } from "@material-ui/core";
+import { Search } from "@material-ui/icons";
 
 const SearchBar = (props) => {
   const [text, setText] = useState("");
@@ -13,12 +15,18 @@ const SearchBar = (props) => {
   };
 
   return (
-    <div>
+    <Box
+      style={{
+        padding: 10,
+      }}
+    >
       <form onSubmit={handleSubmit}>
-        <input type="text" width="20" onChange={handleChange} />
-        <button type="submit">Search</button>
+        <TextField id="standard-basic" label="Search" onChange={handleChange} />
+        <IconButton type="submit">
+          <Search />
+        </IconButton>
       </form>
-    </div>
+    </Box>
   );
 };
 
