@@ -1,13 +1,5 @@
 // API DOCS: https://developer.edamam.com/edamam-docs-recipe-api
 
-const app_id = "c5434b08";
-const app_key = "ec42fbbbe8be99e54a4a816891dbb9a9";
-const q = "chicken";
-
-const url = `https://api.edamam.com/search?q=${q}&app_id=${app_id}&app_key=${app_key}`;
-
-console.log(url);
-
 /**
 
 Plan
