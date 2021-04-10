@@ -2,8 +2,9 @@
   "name": "hackathon_uiuc_21",
   "version": "1.0.0",
   "description": "hackathon project food app",
-  "main": "index.js",
+  "main": "api/server.js",
   "scripts": {
+    "start": "node api/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
