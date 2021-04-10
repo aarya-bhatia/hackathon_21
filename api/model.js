@@ -1,29 +1,35 @@
-const config = require("config");
+const config = require("./config");
 const fetch = require("node-fetch");
 
-module.exports = {
- loadData = function (searchWord) {
+module.exports.loadData = (searchWord) => {
   return new Promise((resolve, reject) => {
-    fetch(getSearchURL(searchWord))
+    fetch(this.getSearchURL(searchWord))
       .then((res) => res.json())
-      .then((res) => resolve(res))
+      .then((res) => {
+        console.log(res);
+        resolve(res);
+      })
       .catch((err) => reject(err));
   });
-},
+};
 
- getRecipes = function (data) {
+module.exports.getRecipes = (data) => {
   let arr = [];
   data.hits.forEach((e) => {
-    arr = [...arr, extractRecipeData(e.recipe)];
+    arr = [...arr, this.extractRecipeData(e.recipe)];
   });
   return arr;
-},
+};
 
- getSearchURL = function (q) {
-  return `${base_url}/search?q=${q}&app_id=${app_id}&app_key=${app_key}`;
-},
+module.exports.getSearchURL = (q) => {
+  const url = `${config.base_url}/search?q=${q}&app_id=${config.app_id}&app_key=${config.app_key}`;
 
- extractRecipeData = (r) => {
+  console.log(url);
+
+  return url;
+};
+
+module.exports.extractRecipeData = (r) => {
   return {
     label: r.label,
     image: r.image,
@@ -35,6 +41,4 @@ module.exports = {
     calories: r.calories,
     ingredients: r.ingredients,
   };
-}
-
-}
+};

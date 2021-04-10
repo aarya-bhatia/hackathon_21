@@ -15,13 +15,15 @@ app.get("/search/:q", (req, res) => {
     .then((data) => {
       res.json(model.getRecipes(data));
     })
-    .catch((err) => next(err));
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
 app.use((err, req, res, next) => {
   res.status(500).send(err.message);
 });
 
-app.listen(port, () => {
-  console.log("Server running on port: " + port);
+app.listen(config.port, () => {
+  console.log("Server running on port: " + config.port);
 });
