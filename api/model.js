@@ -5,10 +5,7 @@ module.exports.loadData = (searchWord) => {
   return new Promise((resolve, reject) => {
     fetch(this.getSearchURL(searchWord))
       .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
-        resolve(res);
-      })
+      .then((res) => resolve(res))
       .catch((err) => reject(err));
   });
 };
@@ -22,11 +19,7 @@ module.exports.getRecipes = (data) => {
 };
 
 module.exports.getSearchURL = (q) => {
-  const url = `${config.base_url}/search?q=${q}&app_id=${config.app_id}&app_key=${config.app_key}`;
-
-  console.log(url);
-
-  return url;
+  return `${config.base_url}/search?q=${q}&app_id=${config.app_id}&app_key=${config.app_key}`;
 };
 
 module.exports.extractRecipeData = (r) => {
