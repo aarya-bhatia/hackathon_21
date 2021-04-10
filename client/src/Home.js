@@ -3,6 +3,8 @@ import SearchBar from "./SearchBar";
 import Recipe from "./Recipe";
 import { loadData, getRecipes } from "./api";
 
+console.log("hello");
+
 class Home extends React.Component {
   constructor() {
     super();
@@ -25,8 +27,8 @@ class Home extends React.Component {
     return (
       <div>
         <SearchBar search={(param) => this.search(param)} />
-        {this.state.recipes.map((recipe) => {
-          return <Recipe data={recipe} />;
+        {this.state.recipes.map((recipe, i) => {
+          return <Recipe key={i} data={recipe} />;
         })}
       </div>
     );

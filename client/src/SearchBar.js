@@ -16,7 +16,7 @@ const SearchBar = (props) => {
     <div>
       <form onSubmit={handleSubmit}>
         <input type="text" width="20" onChange={handleChange} />
-        <button type="submit" />
+        <button type="submit">Search</button>
       </form>
     </div>
   );
