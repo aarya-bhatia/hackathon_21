@@ -5,7 +5,7 @@ export default function Navbar(props) {
     <div className="nav-container">
       <div className="left-panel">
         <div className="logo-container">
-          <img src="assets/logo.png" alt="Logo" />
+          <span class="large material-icons">restaurant</span>
         </div>
       </div>
 

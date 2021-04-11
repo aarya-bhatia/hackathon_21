@@ -12,11 +12,46 @@ code {
     monospace;
 }
 
-.navbar {
-  margin-left: 10px;
-  margin-right: 10px;
+.nav-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: medium;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.navbar-action {
+.nav .left-panel {
+  flex: 1;
+}
+
+.nav .middle-panel {
+  flex: 2;
+}
+
+.nav .right-panel {
+  flex: 1;
+}
+
+.nav .quick-search-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer {
+  min-height: 60px;
+  padding: 20px;
+  margin-top: 20px;
+  color: rgba(59, 55, 55, 0.753);
+  font-size: 1.2rem;
+}
+
+.footer .footer-container {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.footer .footer-item {
   margin-right: 20px;
 }

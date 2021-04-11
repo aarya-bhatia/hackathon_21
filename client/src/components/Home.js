@@ -39,9 +39,11 @@ class Home extends React.Component {
   render() {
     return (
       <div
-        style={{
-          height: 0.9 * window.innerHeight,
-        }}
+        style={
+          {
+            // height: 0.9 * window.innerHeight,
+          }
+        }
       >
         <Navbar />
         <div
