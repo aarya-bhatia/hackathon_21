@@ -11,9 +11,9 @@ export default function Navbar(props) {
   return (
     <div className="nav-container">
       <div className="left-panel">
-        <div className="logo-container">
+        <a href="" className="logo-container">
           <span class="large material-icons">restaurant</span>
-        </div>
+        </a>
       </div>
 
       <div className="middle-panel">
@@ -60,21 +60,21 @@ export default function Navbar(props) {
 
       <div className="nav-right-panel">
         <div className="row">
-          <div className="col s6">
+          <a href="" className="col s6">
             <span class="material-icons">person_outline</span>
-          </div>
-          <div className="col offset-s2 s4">
+          </a>
+          <a href="" className="col offset-s2 s4">
             <span class="material-icons">menu</span>
-          </div>
+          </a>
         </div>
         <br />
         <div className="row">
-          <div className="col s6">
+          <a href="" className="col s6">
             <span class="material-icons">explore</span>
-          </div>
-          <div className="col offset-s2 s4">
+          </a>
+          <a href="" className="col offset-s2 s4">
             <span class="material-icons">favorite</span>
-          </div>
+          </a>
         </div>
       </div>
     </div>

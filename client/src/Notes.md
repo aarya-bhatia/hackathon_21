@@ -15,3 +15,9 @@ Algorithm
 -> If there are no recipes, start over but decrease the threshold for the number of ingredients that must match in inventory.
 
 API DOCS: https://developer.edamam.com/edamam-docs-recipe-api
+
+Add dropdown to recipes to display
+- Meal Type
+- Cuisine
+- Dish Type
+-Health Label
