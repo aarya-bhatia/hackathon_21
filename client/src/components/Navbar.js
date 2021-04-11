@@ -29,10 +29,13 @@ export default function Navbar(props) {
               <span class="material-icons prefix">search</span>
               <input
                 type="text"
+                name="search"
                 className="search-input"
                 placeholder="Search recipes with..."
                 onChange={(e) => setText(e.target.value)}
+                autoComplete="off"
               />
+              <label htmlFor="search"></label>
             </div>
           </form>
           <div className="quick-search-container">
@@ -44,6 +47,12 @@ export default function Navbar(props) {
             </div>
             <div className="quick-search-item">
               <div className="chip">Non Dairy</div>
+            </div>
+            <div className="quick-search-item">
+              <div className="chip">Gluten Free</div>
+            </div>
+            <div className="quick-search-item">
+              <div className="chip">Beverages</div>
             </div>
           </div>
         </div>

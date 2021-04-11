@@ -13,9 +13,9 @@ const Recipe = ({ data, addRecipe }) => {
         <span className="card-title">{data.label}</span>
         <a
           href="!"
-          className="btn-floating halfway-fab waves-effect waves-light green"
+          className="btn-floating halfway-fab waves-effect waves-light red darken-1"
         >
-          <button className="btn-floating" onClick={handleClick}>
+          <button className="btn-floating red lighten-1" onClick={handleClick}>
             <i className="material-icons">add</i>
           </button>
         </a>
@@ -23,7 +23,7 @@ const Recipe = ({ data, addRecipe }) => {
       <div className="card-content">
         <div> Time: {data.totalTime} minutes </div>
         <div> Calories: {Math.round(data.calories)} </div>
-        
+
         <div> Meal: {data.mealTypes} </div>
 
         {/* <div>Cooking Instructions</div>
