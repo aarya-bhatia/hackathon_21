@@ -17,7 +17,15 @@ code {
   margin-bottom: 20px;
   font-size: medium;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left-panel {
+  border: 1px solid orange;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: rgb(247, 178, 51);
 }
 
 .nav .left-panel {
@@ -25,14 +33,15 @@ code {
 }
 
 .nav .middle-panel {
-  flex: 2;
+  flex: 3;
+  flex-grow: 2;
 }
 
 .nav .right-panel {
   flex: 1;
 }
 
-.nav .quick-search-container {
+.quick-search-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -54,4 +63,32 @@ code {
 
 .footer .footer-item {
   margin-right: 20px;
+}
+
+/* label color */
+.input-field label {
+  color: #000;
+}
+/* label focus color */
+.input-field input[type="text"]:focus + label {
+  color: #000;
+}
+/* label underline focus color */
+.input-field input[type="text"]:focus {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* valid color */
+.input-field input[type="text"].valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* invalid color */
+.input-field input[type="text"].invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #000;
 }

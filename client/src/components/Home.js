@@ -38,24 +38,14 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div
-        style={
-          {
-            // height: 0.9 * window.innerHeight,
-          }
-        }
-      >
-        <Navbar />
-        <div
-          className="container"
-          style={{
-            marginTop: "10px",
-            marginBottom: "10px",
-          }}
-        >
-          <SearchBar search={(param) => this.search(param)} />
-        </div>
+      <div>
+        <Navbar search={(param) => this.search(param)} />
         <div className="container">
+          {this.state.recipes.length > 0 && (
+            <h5 className="center-align red-text lighten-4">
+              RECIPES USING YOUR INVENTORY
+            </h5>
+          )}
           <div className="row">
             {this.state.recipes.map((recipe, i) => (
               <div className="col s4">
