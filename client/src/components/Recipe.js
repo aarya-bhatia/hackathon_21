@@ -23,6 +23,9 @@ const Recipe = ({ data, addRecipe }) => {
       <div className="card-content">
         <div> Time: {data.totalTime} minutes </div>
         <div> Calories: {Math.round(data.calories)} </div>
+        
+        <div> Meal: {data.mealTypes} </div>
+
         {/* <div>Cooking Instructions</div>
         <ul>
           {data.instructions.map((line) => {
