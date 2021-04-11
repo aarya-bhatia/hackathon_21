@@ -3,7 +3,6 @@ import SearchBar from "./SearchBar";
 import Recipe from "./Recipe";
 import Navbar from "./Navbar";
 import { loadData, getRecipes } from "../api";
-import { addRecipe } from "../data";
 
 console.log("hello");
 
@@ -39,7 +38,11 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div>
+      <div
+        style={{
+          height: 0.9 * window.innerHeight,
+        }}
+      >
         <Navbar />
         <div
           className="container"
